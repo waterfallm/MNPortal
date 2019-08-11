@@ -1,0 +1,13 @@
+extends layout
+//- MNInstance.find({}, 'Coin VPSServer MN Server Command Output create_date') 
+//- res.render( 'MNList' ,{ title: 'Masternode List',MNInstance: MNInstance } );
+block content
+  h1= title
+  //- h1= MNlist
+  //- h1= MNInstance
+
+  each MN in MNlist
+      li #{MN.Coin}:#{MN.MNServer}:#{MN.Command}
+      li #{MN.Output}
+  else
+      li There are no books.
